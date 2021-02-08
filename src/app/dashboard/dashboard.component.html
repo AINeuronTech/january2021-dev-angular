@@ -1,0 +1,29 @@
+<ul>
+  <li [class.active]="viewMode=='all'" (click)="viewMode='all'">All Numbers</li>
+  <li [class.active]="viewMode=='even'" (click)="viewMode='even'">Even Numbers</li>
+  <li [class.active]="viewMode=='odd'" (click)="viewMode='odd'">Odd Numbers</li>
+  <li [class.active]="viewMode=='10s'" (click)="viewMode='10s'">All 10s</li>
+  <li [class.active]="viewMode=='prime'" (click)="viewMode='prime'">Prime Numbers</li>
+  <li [class.active]="viewMode=='whatever'" (click)="viewMode='whatever'">No Match</li>
+</ul>
+
+<div class="number-bloc" [ngSwitch]="viewMode">
+  <ul *ngSwitchCase="'all'">
+    <li class="card" *ngFor="let number of allNumbers; let i = index">{{ number }}</li>
+  </ul>
+  <ul *ngSwitchCase="'even'">
+    <li class="card" *ngFor="let number of evenNumbers">{{ number }}</li>
+  </ul>
+  <ul *ngSwitchCase="'odd'">
+    <li class="card" *ngFor="let number of oddNumbers">{{ number }}</li>
+  </ul>
+  <ul *ngSwitchCase="'10s'">
+    <li class="card" *ngFor="let number of tenNumbers">{{ number }}</li>
+  </ul>
+  <ul *ngSwitchCase="'prime'">
+    <li class="card" *ngFor="let number of primeNumbers">{{ number }}</li>
+  </ul>
+  <ul *ngSwitchDefault>
+    <div>Try another option</div>
+  </ul>
+</div>

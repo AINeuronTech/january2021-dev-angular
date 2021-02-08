@@ -1,0 +1,47 @@
+<div class="home-container">
+  <h1>Welcome, {{ name }}</h1>
+  <span> {{ duration }}</span><span>{{ duration > 1 ? 'seconds' : 'second'}}</span>
+  <h3>{{ "Using String Interpolation: " + title }}</h3>
+  <!--<div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda illo doloremque commodi neque libero modi doloribus magni, dolorum officia adipisci, optio delectus itaque dicta, quaerat provident repellat dolore consequatur ex? Esse et dolor ab veritatis nulla natus, facilis repellat laboriosam cumque odio non commodi vitae sed debitis ipsam, ex, quis molestiae expedita illo? Debitis expedita sequi, quam dicta, quos perferendis similique voluptate sunt ad suscipit, quaerat doloribus omnis ex aperiam blanditiis sed excepturi exercitationem saepe ipsam impedit laborum voluptatum. Possimus culpa voluptas saepe fugit cumque eveniet corporis dolor porro, soluta distinctio iste, dolores debitis itaque et excepturi earum unde est iure, ducimus consequatur perferendis assumenda nostrum adipisci consectetur. Illo, aliquid id dolore, minus ad deserunt, explicabo quod similique eligendi a quae. Alias quibusdam facilis mollitia, amet esse ratione id ducimus aspernatur vero eligendi officiis quas fuga, delectus totam quod repellat non doloremque dignissimos magni nostrum distinctio. Quas aspernatur veritatis architecto sit exercitationem doloribus voluptates ut harum odit quasi. Est vero aliquam tenetur possimus non dignissimos? Quibusdam distinctio molestias ducimus ut perferendis dolore numquam earum? Soluta officia magni officiis dolor sapiente illum quaerat doloremque impedit, asperiores obcaecati possimus! Repudiandae saepe, aliquid officiis, quas mollitia facere nemo maxime incidunt, vel temporibus corporis.</div>-->
+</div>
+
+<img [src]="imageUrl" />
+
+<br>
+<br>
+<input [disabled]="isActive" />
+
+<!--<input [placeholder]="username" />-->
+
+<button [disabled]="!isAuthenticated">Save</button>
+
+
+<button [attr.aria-label]="actionName">{{actionName}} with Aria</button>
+<a [href]="destinationUrl" [attr.alt-destination]="alternativeUrl">Search with google</a>
+
+<div style="height: 200px;"></div>
+
+<input type="text" [(ngModel)]="userName" placeholder="type your name">
+<h3>Hi there, welcome {{ userName }}</h3>
+
+
+<button (click)="onClick()">Click here</button>
+<div class="user-container" (click)="toggleColor()"> This is a div</div>
+<h3>You have clicked {{clickCounter}} times</h3>
+
+<textarea (keydown)="onKeyPressed($event)"></textarea>
+
+<h1 [class.special]="isSpecial">Example of a class binding</h1>
+<h1 class="another-class" [class.special]="isSpecial">Example of a class binding</h1>
+<h4 [ngClass]="isSpecial ? 'special' : 'regular-user'">Example of a multiple class binding</h4>
+
+<div [style.color]="!applystyle? 'blue':'orange'">Style binding</div>
+
+<div style="margin-bottom: 200px;"></div>
+
+<h4>NgIf</h4>
+<ul *ngFor="let person of people">
+  <li *ngIf="person.age < 34">
+    {{ person.name }} ({{ person.age }})
+  </li>
+</ul>
