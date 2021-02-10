@@ -1,0 +1,10 @@
+<div class="child1-container">
+  <h2>Child component:  {{ childData }}</h2>
+  <p>{{ childMessage }}</p>
+  {{ counter * 2}}
+  <app-product-details
+    [grandchildData]="childData"
+    (messageEvent)="receiveMessage($event)"
+    (messageEvent)="messageEvent.emit($event)">
+  </app-product-details>
+</div>

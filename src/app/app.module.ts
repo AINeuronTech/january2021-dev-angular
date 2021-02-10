@@ -6,13 +6,21 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NumberBlocComponent } from './number-bloc/number-bloc.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductSpecComponent } from './product-spec/product-spec.component';
+import { ProductOverviewComponent } from './product-overview/product-overview.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DashboardComponent,
-    NumberBlocComponent
+    NumberBlocComponent,
+    ProductsComponent,
+    ProductDetailsComponent,
+    ProductSpecComponent,
+    ProductOverviewComponent
   ],
   imports: [
     BrowserModule,
