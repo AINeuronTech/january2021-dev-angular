@@ -1,10 +1,22 @@
-Hello {{title}}
+
+<div class="app-container">
+  <h1>{{title}} : {{ childMessage }}</h1>
+  <div>{{counter}}</div>
+  <button (click)="increament()">Increament</button>
+  <app-products
+    [childData]="parentMessage"
+    [counter]="counter"
+    (messageEvent)="receiveMessage($event)">
+  </app-products>
+</div>
 
 <!--<div>
   <app-dashboard></app-dashboard>
 </div>-->
 
-<app-number-bloc></app-number-bloc>
+<!--<app-number-bloc></app-number-bloc>-->
+
+
 
 
 <router-outlet>
