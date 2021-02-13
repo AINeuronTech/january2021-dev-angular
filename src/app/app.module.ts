@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NumberBlocComponent } from './number-bloc/number-bloc.component';
-import { ProductsComponent } from './products/products.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { ProductSpecComponent } from './product-spec/product-spec.component';
-import { ProductOverviewComponent } from './product-overview/product-overview.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductComponent } from './product/product.component';
+import { TopnavComponent } from './topnav/topnav.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { MembersOnlyComponent } from './members-only/members-only.component';
+import { AuthGuard } from './auth.guard';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +21,13 @@ import { ProductOverviewComponent } from './product-overview/product-overview.co
     HomeComponent,
     DashboardComponent,
     NumberBlocComponent,
-    ProductsComponent,
-    ProductDetailsComponent,
-    ProductSpecComponent,
-    ProductOverviewComponent
+    ProductListComponent,
+    ProductComponent,
+    TopnavComponent,
+    NotFoundComponent,
+    MembersOnlyComponent,
+    SigninComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
