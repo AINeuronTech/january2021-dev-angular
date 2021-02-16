@@ -6,7 +6,7 @@ import { ProductsComponent } from './products/products.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
   title = 'Parent component';
   parentMessage = 'hello son, how are you';
   childMessage = '';
@@ -23,7 +23,7 @@ export class AppComponent implements AfterViewInit {
     this.counter++;
   }
 
-  ngAfterViewInit() {
-    this.childMessage = this.child.childMessage;
-  }
+  //ngAfterViewInit() {
+  //  this.childMessage = this.child.childMessage;
+  //}
 }

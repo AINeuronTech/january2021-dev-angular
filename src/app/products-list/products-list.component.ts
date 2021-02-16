@@ -1,12 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-product-details',
-  templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.scss'],
+  selector: 'app-products-list',
+  templateUrl: './products-list.component.html',
+  styleUrls: ['./products-list.component.scss'],
 })
-export class ProductDetailsComponent implements OnInit {
+export class ProductsListComponent implements OnInit {
   public productList = [
     {
       id: 1,
@@ -195,15 +194,7 @@ export class ProductDetailsComponent implements OnInit {
       image: 'https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg',
     },
   ];
+  constructor() {}
 
-  public selectedProduct: any;
-
-  constructor(private _route: ActivatedRoute) {}
-
-  ngOnInit(): void {
-    this._route.paramMap.subscribe((params) => {
-      console.log('productId=====', params);
-      this.selectedProduct = this.productList[Number(params.get('productId')) - 1];
-    });
-  }
+  ngOnInit(): void {}
 }

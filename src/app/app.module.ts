@@ -10,6 +10,12 @@ import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductSpecComponent } from './product-spec/product-spec.component';
 import { ProductOverviewComponent } from './product-overview/product-overview.component';
+import { TopnavComponent } from './topnav/topnav.component';
+import { SigninComponent } from './signin/signin.component';
+import { SignupComponent } from './signup/signup.component';
+import { MembersOnlyComponent } from './members-only/members-only.component';
+import { ProductsListComponent } from './products-list/products-list.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,13 @@ import { ProductOverviewComponent } from './product-overview/product-overview.co
     ProductsComponent,
     ProductDetailsComponent,
     ProductSpecComponent,
-    ProductOverviewComponent
+    ProductOverviewComponent,
+    TopnavComponent,
+    SigninComponent,
+    SignupComponent,
+    MembersOnlyComponent,
+    ProductsListComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
