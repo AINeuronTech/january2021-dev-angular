@@ -16,6 +16,8 @@ import { SignupComponent } from './signup/signup.component';
 import { MembersOnlyComponent } from './members-only/members-only.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './product.service';
 
 @NgModule({
   declarations: [
@@ -32,14 +34,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SignupComponent,
     MembersOnlyComponent,
     ProductsListComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
+  providers: [ProductService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
