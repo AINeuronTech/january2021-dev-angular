@@ -16,6 +16,9 @@ import { SignupComponent } from './signup/signup.component';
 import { MembersOnlyComponent } from './members-only/members-only.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductService } from './product.service';
+import { HelloworldComponent } from './helloworld/helloworld.component';
 
 @NgModule({
   declarations: [
@@ -32,14 +35,16 @@ import { NotFoundComponent } from './not-found/not-found.component';
     SignupComponent,
     MembersOnlyComponent,
     ProductsListComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HelloworldComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

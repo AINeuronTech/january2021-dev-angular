@@ -1,4 +1,5 @@
-<div class="products-list__container" *ngFor="let product of productList">
+<div class="products-list__container">
+<div *ngFor="let product of productList">
   <div class="product-card">
     <a [routerLink]="['/products', product.id]">
       <div class="card">
@@ -10,5 +11,6 @@
     </div>
     </a>
   </div>
+</div>
 </div>
 
